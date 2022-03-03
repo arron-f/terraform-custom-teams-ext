@@ -1,5 +1,7 @@
-import pymsteams
 import sys, json;
+sys.path.append('./pip_requirements')
+
+import pymsteams
 
 def callTeams(url, title, msg):
 	# You must create the connectorcard object with the Microsoft Webhook URL
