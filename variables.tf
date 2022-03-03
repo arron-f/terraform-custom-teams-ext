@@ -10,7 +10,7 @@ variable "teamsurl" {
      error_message = "The resource_name must be greater than 50 characters."
   }
   validation {
-     condition     = can(regex("^https://*.webhook.office.com/webhookb2", var.teamsurl))
+     condition     = can(regex("^https://[[:alnum:]]*.webhook.office.com/webhookb2", var.teamsurl))
      error_message = "The URL must be talking to office."
   }
 }
